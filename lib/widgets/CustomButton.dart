@@ -1,9 +1,8 @@
 // @dart=2.9
 
 import 'package:e_commerce_app/Constant.dart';
-import 'package:flutter/material.dart';
-
 import 'package:e_commerce_app/widgets/CustumText.dart';
+import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -13,14 +12,15 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return TextButton(
       onPressed: onPress,
-      color: primarycolor,
-      textColor: Colors.white,
-      padding: EdgeInsets.all(18),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
+      style: TextButton.styleFrom(
+          primary: Colors.white,
+          backgroundColor: primarycolor,
+          padding: EdgeInsets.all(18),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          )),
       child: CustomText(
         text: text,
         color: Colors.white,

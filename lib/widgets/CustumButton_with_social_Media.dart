@@ -9,6 +9,7 @@ class CustomButtonWithSocial extends StatelessWidget {
   final VoidCallback onpress;
 
   CustomButtonWithSocial({this.text, this.imagename, this.onpress});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,9 +17,11 @@ class CustomButtonWithSocial extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: Colors.grey.shade100,
       ),
-      child: FlatButton(
+      child: TextButton(
         onPressed: onpress,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        style: TextButton.styleFrom(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
+        ),
         child: Row(
           children: [
             Image.asset("assets/images/" + imagename),
